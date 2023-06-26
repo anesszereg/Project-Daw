@@ -1,0 +1,635 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* Style général */
+body {
+    font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  list-style-type: none;
+  display: flex;
+}
+button,
+input[type="button"] {
+  cursor: pointer;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Style header */
+header {
+  position: absolute;
+  top: 0;
+  left: 270px;
+  height: 310px;
+  background-image: url(./forest.jpg);
+  background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
+  display: flex;
+background-position: center;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+  object-fit: contain;
+}
+header h1 {
+  position: absolute;
+  top: 5px;
+  font-size: 75px;
+  /* font-family: "El Messiri", sans-serif; */
+}
+/* Stylebarre de navigation */
+nav {
+  background-color: #004747;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  font-size: 12px;
+}
+/*style titre Etudiant*/
+nav h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 55px;
+}
+/*style barres*/
+nav hr {
+  width: 79%;
+  margin-bottom: 35px;
+}
+/*style boutons 1 et 2*/
+.boutons {
+  display: flex;
+  justify-content: space-between;
+  width: 109%;
+  height: 100px;
+  align-items: flex-end
+}
+.boutons input {
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid #6d8383;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+.btn1 {
+  background-color: #004747;
+    width: 100px;
+    filter: brightness(1.75);
+}
+.btn2 {
+    width: 100px;
+    height: 100%;
+    background-color: #004747;
+  }
+  .etudiant-infos {
+    margin-bottom: 30px;
+    background-color: #004747;
+  /* background-color: #6d8383; */
+  filter: brightness(1.75);
+  padding: 10px;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+}
+
+.carte {
+  position: fixed;
+  left: 210px;
+  top: 480px;
+  width: 260px;
+  z-index: 2;
+}
+.info-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.info-bloc a {
+  text-decoration: none;
+  color: #000;
+}
+.groupe-pere {
+  position: relative;
+  margin-bottom: 31px;
+}
+.groupe {
+  position: absolute;
+  right: 0;
+}
+.btn-ville {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: white;
+  color: #001247;
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*partie home recherche*/
+/* .partie-home{
+
+  margin-left: 270px;
+}
+.ville-details{
+  height: 100vh;
+} */
+.partie-home, 
+.ville-info {
+margin-left: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #001247;
+  width: 100%;
+  background-color: #6d8383;
+}
+.recherche-bloc,
+.recherche-bloc form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recherche-bloc {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: solid 1px grey;
+  width: 950px;
+  position: absolute;
+  top: -65px;
+  height: 300px;
+}
+.partie-home h2 {
+  font-size: 33px;
+}
+.recherche-bloc form {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.part,
+.ajout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: fit-content;
+  width: 100%;
+}
+
+.part div,
+.ajout-groupe div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4px;
+}
+.recherche-bloc input {
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 190px;
+  height: 30px;
+}
+.recherche-bloc button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 142px;
+  height: 39px;
+  border-radius: 10px;
+  background-color: #001247;
+  color: white;
+  border: none;
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+}
+/*resultats de la recherche*/
+.resultat {
+  margin-top: 240px;
+  width: 100%;
+  height: 350px;
+}
+.affichage {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/*ville resultat*/
+.affichage-ville {
+  width: 950px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ville {
+  margin: 15px;
+}
+.ville,
+.ecriture,
+.icones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:300px;
+  gap: 20px;
+}
+
+.icones{
+  gap: 20px;
+
+}
+.ecriture {
+  flex-direction: column;
+}
+.ecriture h3,
+.ecriture h5 {
+  margin: 0;
+}
+.ecriture a {
+  color: #000;
+}
+.ecriture a:hover {
+  color: white;
+  text-shadow: 0 0 4px #001247;
+}
+.ecriture hr {
+  width: 100%;
+  background-color: #888;
+  margin: 3px;
+}
+.icones img {
+  width: 20px;
+  margin: 0 4px 0 4px;
+  cursor: pointer;
+}
+.icones {
+  margin-left: 3px;
+}
+/*pop-up*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  padding: 280px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  border: 1px solid #888;
+  width: 70%;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  font-family: "El Messiri";
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* Modal Header */
+.modal-header {
+  background-color: red;
+  color: white;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.modal-header h2 {
+  margin-left: 5px;
+  font-size: 20px;
+}
+/* Modal Body */
+.modal-body {
+  background-color: white;
+  color: rgb(185, 14, 14);
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+#btndonne {
+  list-style-type: none;
+  width: 70px;
+  height: 25px;
+  border: 2px solid red;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+#btndonne:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+#tbuser {
+  color: black;
+  border: 2px solid red;
+  height: 25px;
+  border-radius: 4px;
+}
+#output1 {
+  display: flex;
+  margin-left: 5px;
+  font-size: 18px;
+}
+/* Modal Footer */
+.modal-footer {
+  background-color: red;
+  color: white;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-footer img {
+  height: 28px;
+  margin-left: 5px;
+  animation: beat 0.3s infinite alternate;
+}
+@keyframes beat {
+  to {
+    transform: scale(1.2);
+  }
+}
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all ease-in-out 0.3s;
+  display: block;
+  position: static;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all ease-in-out 0.3s;
+}
+
+/*ville.php*/
+.image {
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Style ajout.php */
+.ajout-ville {
+  background-image: url(./forest.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  background-position: center;
+  display: flex ;
+  justify-content: center;
+  color: black;
+  height: 100%;
+  width: 100%;
+  margin-left:250px ;
+}
+.ajout-ville input,
+.ajout-ville select {
+  width: 100%;
+  height: 27px;
+  border: 0.5px solid #ccc;
+  border-radius: 11px;
+  padding: 5px;
+  outline: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.btnplus {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #001247;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #001247;
+  margin-top: -5px;
+}
+.btnplus span {
+  font-weight: 400;
+  font-size: 20px;
+}
+.btn-ajouter,
+.ajout-ville button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  outline: none;
+  color: #001247;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: -7px;
+  /* margin-left: 15px; */
+}
+.ajout-ville button[type="submit"] {
+    background-color: #001247;
+    padding: 5px;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    
+}
+.ajout-ville form,
+.ajout-groupe {
+  display: flex;
+  align-items: center;
+  
+  
+}
+
+
+
+.ajout-ville form {
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  border-radius: 30px;
+  border: 1px solid #001247;
+  margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.aligner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  gap: 10px;
+  width: 100%;
+}
+.ajout-groupe {
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+.ajout-ville select {
+  height: 50px;
+}
+/*modal ajout-pays:*/
+#modalSection {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modalSection form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+#modalSection h4.center {
+  text-align: center;
+}
+
+#modalSection label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#modalSection input[type="text"],
+#modalSection select {
+  width: 100%;
+  height:25px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+#modalSection .red-text {
+  color: red;
+  margin-bottom: 10px;
+}
+
+#modalSection .center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#modalSection .btn {
+  background-color: #0f8b13;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#modalSection .btn.brand {
+  background-color: #824100;
+}
+
+#modalSection button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#modalSection button a:hover {
+  text-decoration: underline;
+}
+
+.box{
+    backdrop-filter: blur(10px);
+}
+
+.card{
+
+    width: 333px;
+}
+
+/* .actions > a{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-decoration: none;
+  color:#fff !important  ;
+  font-size: 20px;
+}
+.actions > a:hover{
+  color: #004747 !important ;
+  transition: all ease-in 300ms;
+
+} */
